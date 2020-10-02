@@ -1,0 +1,217 @@
+    \documentclass[12pt]{article}
+
+%==============================================================================%
+%                                   PACKAGES                                   %
+%==============================================================================%
+
+% Basic settings
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+
+% Better captions
+\usepackage[labelfont=bf,textfont=it]{caption}
+
+% Better colors
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+% References
+\usepackage{hyperref}
+
+\hypersetup{
+  bookmarksopen=true,    % Show bookmarks bar?
+  pdfcreator={pdflatex}, % Creator of the document
+  pdfnewwindow=true,     % Links in new window
+  colorlinks=true,       % false: boxed links; true: colored links
+  linkcolor=NavyBlue,    % Color of internal links
+  citecolor=DarkGreen,   % Color of links to bibliography
+  filecolor=DarkGreen,   % Color of file links
+  urlcolor=DarkRed       % Color of external links
+}
+
+% Brazilian identation
+\usepackage{setspace}
+\usepackage{indentfirst}
+
+% Complex environments
+\usepackage{float}
+\usepackage{lscape}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{longtable}
+
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+% Special floats
+\usepackage{newfloat}
+\usepackage{caption}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+%\setlength{\parindent}{3em}
+%\setlength{\parskip}{1em}
+% Lorem ipsum
+%\usepackage{lipsum} % TODO: remover para não ficar nenhum lorem ipsum!
+
+%==============================================================================%
+%                                    FAPESP                                    %
+%==============================================================================%
+ 
+\usepackage[a4paper]{geometry}
+\geometry{hmargin={2.0cm,2.0cm}}
+\geometry{vmargin={2.5cm,2.5cm}}
+
+%==============================================================================%
+%                                    NOTATION                                  %
+%==============================================================================%
+
+\newcommand{\etal}{{\it et al.}} 
+
+
+\newcommand{\eng}{\textit}
+\renewcommand{\emph}{\textbf}
+
+\DeclareUnicodeCharacter{301}{é}
+
+\DeclareFloatingEnvironment[name=Cronograma]{timetable}
+%\captionsetup[timetable]{labelfont=bf}
+
+\newcolumntype{C}[0]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{2.2em}}
+
+%==============================================================================%
+%                                    DOCUMENTS                                 %
+%==============================================================================%
+
+\begin {document}
+  %----------------------------------------------------------------------------%
+  %                                FRONT PAGES                                 %
+  %----------------------------------------------------------------------------%
+
+  \pagenumbering{gobble}
+  \input{info/titlepage.tex}
+  %\input{info/front_page-pt_BR.tex}
+  %\input{info/front_page-en_US.tex}
+
+  %----------------------------------------------------------------------------%
+  %                                 ABSTRACTS                                  %
+  %----------------------------------------------------------------------------%
+  
+  \spacing{1.5}
+
+  %\input{info/abstract-pt_BR.tex}
+  %\input{info/abstract-en_US.tex}
+  %\clearpage
+  
+  %----------------------------------------------------------------------------%
+  %                                  GLOSSARY                                  %
+  %----------------------------------------------------------------------------%
+
+  %\input{info/glossary.tex}
+  %\pagebreak
+  %----------------------------------------------------------------------------%
+  %                                  SECTIONS                                  %
+  %----------------------------------------------------------------------------%
+
+  \pagenumbering{arabic}
+
+  \input{sections/variables.tex} 
+  \input{sections/definitions.tex} 
+  \input{sections/rules.tex} 
+  %\input{sections/related_products.tex}
+  %\input{sections/challenges.tex}
+  %\input{sections/methodology.tex}
+  %\input{sections/evaluation.tex} %- Resultados e Impactos Esperados
+  %\input{sections/dissemination.tex}
+  
+
+  %----------------------------------------------------------------------------%
+  %                                BIBLIOGRAPHY                                %
+  %----------------------------------------------------------------------------%
+  
+  
+  
+  
+  
+%\input{appendices/undergraduate_research_projects.tex}
+
+%Locador: \hrulefill
+
+%\hspace*{0mm}\phantom{Locador: }\nomelocador
+
+
+%$$\overline{\text{\nomelocador}}$$
+
+
+  \linespread{5}\selectfont
+  %\bibliographystyle{plain}
+  %\bibliography{name} 
+   %\clearpage
+
+  %----------------------------------------------------------------------------%
+  %                                 APPENDICES                                 %
+  %----------------------------------------------------------------------------%
+
+  \spacing{1.2}
+  %\appendix
+  \bigskip 
+   \bigskip 
+    \bigskip 
+     \bigskip 
+     
+     
+ \bigskip 
+  \bigskip 
+   \bigskip 
+    \bigskip 
+     \bigskip 
+     
+          
+ \bigskip 
+  \bigskip 
+   \bigskip 
+    \bigskip 
+     \bigskip 
+     
+               
+ \bigskip 
+  \bigskip 
+   \bigskip 
+    \bigskip 
+     \bigskip 
+  % Appendices
+  
+  %\input{appendices/budget.tex}
+  
+\begin{minipage}[b]{0.5\textwidth}
+-----------------------------------------------
+\newline
+\nomelocador
+\bigskip 
+  \bigskip 
+   \bigskip 
+    \bigskip 
+     \bigskip 
+
+-----------------------------------------------
+\newline
+Testemunha
+\end{minipage}
+%second column
+\begin{minipage}[b]{0.5\textwidth}
+-----------------------------------------------
+\newline
+\nomelocatario.
+\bigskip 
+  \bigskip 
+   \bigskip 
+    \bigskip 
+     \bigskip 
+
+-----------------------------------------------
+\newline
+Testemunha
+\end{minipage}
+
+\end{document}
